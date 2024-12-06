@@ -1,0 +1,159 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 5%;
+  /* Add padding on left and right for a column layout */
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 10;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navbar .nav-tabs {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .nav-tab {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-tab:hover {
+  background-color: #34495e;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: px;
+}
+
+.welcome-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.personalized-greeting {
+  font-size: 20px;
+  color: #7f8c8d;
+}
+
+.things-to-consider {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.things-to-consider h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.things-to-consider ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.things-to-consider li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.recent-listings {
+  margin-top: 20px;
+}
+
+.recent-listings h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.listing-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.listing-card:hover {
+  transform: scale(1.03);
+}
+
+.listing-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.listing-info {
+  padding: 15px;
+}
+
+.listing-info h3 {
+  font-size: 18px;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.listing-info p {
+  margin: 5px 0;
+  color: #7f8c8d;
+}
+
+.listing-info strong {
+  color: #2c3e50;
+}
+
+.no-listings {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+}

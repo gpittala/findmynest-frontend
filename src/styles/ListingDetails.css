@@ -1,0 +1,97 @@
+.listing-details {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 10;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navbar .nav-tabs {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .nav-tab {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-tab:hover {
+  background-color: #34495e;
+}
+
+.image-carousel {
+  height: 50vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.img-fluid {
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.carousel-btn:hover {
+  opacity: 1;
+}
+
+.photo-count {
+  border-radius: 0.5rem;
+}
+
+.details-section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+}
+
+.details-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.details-section h2 {
+  font-size: 1.5rem;
+  color: #495057;
+}
+
+.details-section p {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+button {
+  margin-top: 1rem;
+}
