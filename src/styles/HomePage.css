@@ -7,6 +7,20 @@
   position: relative;
 }
 
+.main-title {
+  font-size: 60px; /* Large font */
+  font-weight: bold; /* Bold font */
+  font-style: italic; /* Italicized text */
+  color: white; /* White color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Slight shadow for visibility */
+  text-align: center; /* Centered horizontally */
+  margin-bottom: 10px; /* Add spacing below the title */
+  position: absolute; /* Position it above the black box */
+  top: 50px; /* Adjust vertical positioning */
+  width: 100%; /* Span the entire width */
+  z-index: 10; /* Ensure it stays on top */
+}
+
 .background-overlay {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 40px;

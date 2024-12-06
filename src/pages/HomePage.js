@@ -76,9 +76,9 @@ function HomePage() {
 
   return (
     <div className="homepage">
+      <h1 className="main-title">FindMyNest</h1>
       <div className="background-overlay">
         <div className="title-container">
-          <h1 className="site-title">FindMyNest</h1>
           <p className="site-subtitle">
             Your perfect place is just a click away!
           </p>
