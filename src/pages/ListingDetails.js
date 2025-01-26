@@ -39,6 +39,30 @@ function ListingDetails() {
     );
   };
 
+  const startConversation = async () => {
+    try {
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      if (!currentUser) {
+        console.error("No logged-in user found");
+        return;
+      }
+
+      const response = await axiosInstance.post("/api/messages/conversation", {
+        user1Id: currentUser.id,
+        user2Id: listing.user_id,
+      });
+
+      const { conversationId } = response.data;
+
+      // Navigate to Messages page with the conversation started
+      navigate("/messages", {
+        state: { user2Id: listing.user_id, conversationId },
+      });
+    } catch (error) {
+      console.error("Error starting conversation:", error);
+    }
+  };
+
   if (!listing) return <p>Loading...</p>;
 
   return (
@@ -144,9 +168,7 @@ function ListingDetails() {
             </p>
             <button
               className="btn btn-primary"
-              onClick={() => {
-                // Implement messaging functionality
-              }}
+              onClick={startConversation}
             >
               Message
             </button>

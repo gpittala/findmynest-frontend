@@ -1,14 +1,31 @@
-.messages-content {
-  padding: 20px;
-  text-align: center;
+.messages-container {
+  height: 100vh;
+  display: flex;
 }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.conversations-column {
+  overflow-y: auto;
 }
 
-p {
-  font-size: 16px;
-  color: #555;
+.chat-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-window {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.chat-message.sent {
+  text-align: right;
+}
+
+.chat-message.received {
+  text-align: left;
+}
+
+.chat-input input {
+  width: 100%;
 }
