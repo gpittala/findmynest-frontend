@@ -1,10 +1,16 @@
+.messages-page {
+  height: calc(100vh - 4rem); /* Full height minus 4rem for padding */
+  margin-top: 1rem; /* One-line gap between navbar and chat interface */
+}
+
 .messages-container {
-  height: 100vh;
   display: flex;
+  height: calc(100% - 3rem); /* Subtract bottom padding (two-line gap) */
 }
 
 .conversations-column {
   overflow-y: auto;
+  border-right: 1px solid #ddd;
 }
 
 .chat-column {
@@ -16,16 +22,35 @@
 .chat-window {
   flex-grow: 1;
   overflow-y: auto;
+  background-color: #ffffff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Ensure messages stick to the bottom */
+}
+
+.chat-message {
+  display: flex;
+  margin-bottom: 0.5rem;
 }
 
 .chat-message.sent {
-  text-align: right;
+  justify-content: flex-end;
 }
 
 .chat-message.received {
-  text-align: left;
+  justify-content: flex-start;
 }
 
-.chat-input input {
-  width: 100%;
+.chat-input {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+.active {
+  background-color: #007bff !important;
+  color: white !important;
 }
