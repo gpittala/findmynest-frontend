@@ -47,17 +47,7 @@ function ListingDetails() {
         return;
       }
 
-      const response = await axiosInstance.post("/api/messages/conversation", {
-        user1Id: currentUser.id,
-        user2Id: listing.user_id,
-      });
-
-      const { conversationId } = response.data;
-
-      // Navigate to Messages page with the conversation started
-      navigate("/messages", {
-        state: { user2Id: listing.user_id, conversationId },
-      });
+      navigate("/messages", { state: { user2Id: listing.user_id } });
     } catch (error) {
       console.error("Error starting conversation:", error);
     }
@@ -166,10 +156,7 @@ function ListingDetails() {
             <p>
               <strong>Mobile:</strong> {listing.contact_mobile}
             </p>
-            <button
-              className="btn btn-primary"
-              onClick={startConversation}
-            >
+            <button className="btn btn-primary" onClick={startConversation}>
               Message
             </button>
           </div>

@@ -59,13 +59,8 @@ function Messages() {
 
       try {
         await axiosInstance.post("/api/messages", messageData);
-        setChatHistory((prev) => [
-          ...prev,
-          { ...messageData, created_at: new Date().toISOString() },
-        ]);
-        socket.emit("sendMessage", messageData);
+        socket.emit("sendMessage", messageData); // Emit the message via socket
         setNewMessage("");
-        scrollToBottom(); // Scroll to bottom after sending a message
       } catch (error) {
         console.error("Error sending message:", error);
       }
